@@ -1,0 +1,320 @@
+/*********************************
+ * CONFIGURAÇÕES DE MEDIDAS
+ *********************************/
+const ingredientesLiquidos = [
+  'Água',
+  'Leite',
+  'Cerveja',
+  'Vinho tinto'
+];
+
+/*********************************
+ * CONTROLE DE TELAS (SLIDER)
+ *********************************/
+let telaAtual = 0;
+const slider = document.querySelector('.slider');
+
+function nextScreen() {
+  telaAtual++;
+  slider.style.transform = `translateX(-${telaAtual * 100}vw)`;
+}
+
+function resetar() {
+  telaAtual = 0;
+  slider.style.transform = `translateX(0)`;
+}
+
+function novaReceita() {
+  telaAtual = 2; // TELA "GERAR RECEITA"
+  slider.style.transform = `translateX(-${telaAtual * 100}vw)`;
+}
+
+function irInicio() {
+  telaAtual = 0;
+  slider.style.transform = `translateX(0)`;
+}
+
+
+/*********************************
+ * CAMPOS DINÂMICOS
+ *********************************/
+function atualizarCampos() {
+  const tipo = document.getElementById('tipoProteina').value;
+  document.getElementById('camposFrango').classList.add('hidden');
+  document.getElementById('campoUnico').classList.add('hidden');
+
+  if (tipo === 'frango') {
+    document.getElementById('camposFrango').classList.remove('hidden');
+  } else if (tipo) {
+    document.getElementById('campoUnico').classList.remove('hidden');
+  }
+
+  carregarSabores(tipo);
+}
+
+function carregarSabores(tipo) {
+  const sabor = document.getElementById('sabor');
+  sabor.innerHTML = `<option value="">Sabor da linguiça</option>`;
+
+  const sabores = {
+    frango: ['Goiana', 'Frangolone', 'Frangalho', 'Marguerita'],
+    bovina: ['Mandaka', 'Nordestina', 'Cuiabana', 'Costela Angus'],
+    suina: [
+      'Bierwurst', 'Clássica', 'Rapadura', 'Pimenta Biquinho',
+      'Queijo Coalho', 'Queijo Picante', 'Apimentada',
+      'Suave', 'Salsicha Parrilheira', 'Apimentada DM'
+    ]
+  };
+
+  sabores[tipo]?.forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s;
+    opt.textContent = s;
+    sabor.appendChild(opt);
+  });
+}
+
+/*********************************
+ * RECEITAS (BASE POR KG)
+ *********************************/
+const receitas = {
+
+  frango: {
+    Goiana: [
+      { nome: 'Água', tipo: '%', valor: 30 },
+      { nome: 'Sal', tipo: '%', valor: 2 },
+      { nome: 'Alho in natura', tipo: '%', valor: 1 },
+      { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
+      { nome: 'Pequi in natura', tipo: '%', valor: 10 },
+      { nome: 'Cebolinha', tipo: 'gosto' }
+    ],
+    Frangolone: [
+      { nome: 'Água', tipo: '%', valor: 30 },
+      { nome: 'Sal', tipo: '%', valor: 2 },
+      { nome: 'Alho in natura', tipo: '%', valor: 1 },
+      { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Queijo coalho', tipo: 'gkg', valor: 70 },
+      { nome: 'Queijo provolone', tipo: 'gkg', valor: 70 },
+      { nome: 'Manjerona', tipo: 'gkg', valor: 2 }
+    ],
+    Frangalho: [
+      { nome: 'Água', tipo: '%', valor: 30 },
+      { nome: 'Sal', tipo: '%', valor: 2 },
+      { nome: 'Alho in natura', tipo: '%', valor: 1 },
+      { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Manjerona', tipo: 'gkg', valor: 2 },
+      { nome: 'Oh My Garlic', tipo: 'gkg', valor: 150 },
+      { nome: 'Alho poró', tipo: 'gkg', valor: 60 }
+    ],
+    Marguerita: [
+      { nome: 'Água', tipo: '%', valor: 30 },
+      { nome: 'Bacon', tipo: '%', valor: 25 },
+      { nome: 'Sal', tipo: '%', valor: 2 },
+      { nome: 'Alho in natura', tipo: '%', valor: 1 },
+      { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
+      { nome: 'Tomate', tipo: 'gkg', valor: 130 },
+      { nome: 'Queijo coalho', tipo: 'gkg', valor: 140 },
+      { nome: 'Manjericão', tipo: 'gosto' }
+    ]
+  },
+
+  bovina: {
+    Mandaka: [
+      { nome: 'Leite', tipo: '%', valor: 40 },
+      { nome: 'Água', tipo: '%', valor: 10 },
+      { nome: 'Sal', tipo: '%', valor: 0.5 },
+      { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
+      { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
+      { nome: 'Queijo coalho', tipo: 'gkg', valor: 120 },
+      { nome: 'Cebolinha', tipo: 'gosto' }
+    ],
+    Nordestina: [
+      { nome: 'Leite', tipo: '%', valor: 40 },
+      { nome: 'Água', tipo: '%', valor: 10 },
+      { nome: 'Sal', tipo: '%', valor: 0.5 },
+      { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
+      { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
+      { nome: 'Queijo coalho', tipo: 'gkg', valor: 120 },
+      { nome: 'Manteiga de garrafa', tipo: '%', valor: 5 },
+      { nome: 'Salsa', tipo: 'gosto' }
+    ],
+    Cuiabana: [
+      { nome: 'Leite', tipo: '%', valor: 40 },
+      { nome: 'Sal', tipo: '%', valor: 2 },
+      { nome: 'Alho in natura', tipo: '%', valor: 1 },
+      { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
+      { nome: 'Queijo coalho', tipo: 'gkg', valor: 140 },
+      { nome: 'Azeitona', tipo: 'gkg', valor: 100 },
+      { nome: 'Cebolinha', tipo: 'gosto' },
+      { nome: 'Salsa', tipo: 'gosto' }
+    ],
+    'Costela Angus': [
+      { nome: 'Água', tipo: '%', valor: 30 },
+      { nome: 'Sal', tipo: '%', valor: 2 },
+      { nome: 'Alho in natura', tipo: '%', valor: 1 },
+      { nome: 'Chimichurri', tipo: '%', valor: 1 },
+      { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 }
+    ]
+  },
+
+  suina: {
+    Bierwurst: [
+      { nome: 'Toucinho', tipo: '%', valor: 15 },
+      { nome: 'Água', tipo: '%', valor: 14 },
+      { nome: 'Cerveja', tipo: '%', valor: 16 },
+      { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
+      { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Queijo coalho', tipo: 'gkg', valor: 140 },
+      { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 }
+    ],
+    'Apimentada DM': [
+      { nome: 'Toucinho', tipo: '%', valor: 15 },
+      { nome: 'Água', tipo: '%', valor: 30 },
+      { nome: 'Sal', tipo: '%', valor: 2.2 },
+      { nome: 'Alho in natura', tipo: '%', valor: 1 },
+      { nome: 'Liga Gel', tipo: '%', valor: 0.45 },
+      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Pimenta calabresa', tipo: '%', valor: 0.7 },
+      { nome: 'Açúcar mascavo', tipo: '%', valor: 1 },
+      { nome: 'Vinho tinto', tipo: '%', valor: 1 },
+      { nome: 'Erva doce', tipo: '%', valor: 0.1 }
+    ]
+  }
+};
+
+/*********************************
+ * GERAR RECEITA
+ *********************************/
+function gerarReceita() {
+  const tipo = document.getElementById('tipoProteina').value;
+  const sabor = document.getElementById('sabor').value;
+
+  let totalKg = 0;
+
+  if (tipo === 'frango') {
+    totalKg =
+      (Number(document.getElementById('peito').value) || 0) +
+      (Number(document.getElementById('coxa').value) || 0);
+  } else {
+    totalKg = Number(document.getElementById('proteinaUnica').value) || 0;
+  }
+
+  if (!tipo || !sabor || totalKg <= 0) {
+    alert('Preencha todos os campos corretamente.');
+    return;
+  }
+
+  nextScreen(); // LOADING
+
+  setTimeout(() => {
+    const lista = receitas[tipo][sabor];
+    let html = `<h3>${sabor} (${totalKg} kg)</h3><table>
+      <tr><th>Ingrediente</th><th>Quantidade</th></tr>`;
+
+    lista.forEach(item => {
+      let qtd = '';
+
+      if (item.tipo === '%') {
+        const base = (item.valor / 100) * totalKg * 1000;
+
+        if (ingredientesLiquidos.includes(item.nome)) {
+          qtd = base >= 1000
+            ? (Math.round(base / 100) / 10) + ' L'
+            : Math.round(base) + ' ml';
+        } else {
+          qtd = Math.round(base) + ' g';
+        }
+      } 
+      else if (item.tipo === 'gkg') {
+        qtd = Math.round(item.valor * totalKg) + ' g';
+      } 
+      else if (item.tipo === 'gosto') {
+        qtd = 'A gosto';
+      }
+
+      html += `<tr><td>${item.nome}</td><td class="qtd">${qtd}</td></tr>`;
+    });
+
+    html += '</table>';
+    document.getElementById('resultado').innerHTML = html;
+    salvarHistorico({
+  responsavel: document.getElementById('responsavel').value,
+  tipo: tipo,
+  sabor: sabor,
+  peso: totalKg,
+  data: new Date().toLocaleString(),
+  receitaHTML: html
+});
+
+    nextScreen(); // RESULTADO
+  }, 1800);
+}
+
+function salvarHistorico(dados) {
+  const historico = JSON.parse(localStorage.getItem('historicoSchetini')) || [];
+  historico.push(dados);
+  localStorage.setItem('historicoSchetini', JSON.stringify(historico));
+}
+
+function abrirHistorico() {
+  montarHistorico();
+  nextScreen();
+}
+
+function voltar() {
+  telaAtual--;
+  slider.style.transform = `translateX(-${telaAtual * 100}vw)`;
+}
+
+function montarHistorico() {
+  const lista = document.getElementById('listaHistorico');
+  const historico = JSON.parse(localStorage.getItem('historicoSchetini')) || [];
+
+  if (historico.length === 0) {
+    lista.innerHTML = '<p>Nenhuma receita registrada.</p>';
+    return;
+  }
+
+  let html = '';
+
+  historico
+    .slice()
+    .reverse()
+    .forEach((item, index) => {
+      html += `
+        <div class="card-historico">
+          <strong>${item.sabor}</strong><br>
+          ${item.tipo} • ${item.peso} kg<br>
+          <small>${item.data}</small><br>
+          <em>${item.responsavel}</em><br><br>
+          <button class="btn mini" onclick="verReceita(${historico.length - 1 - index})">
+            Ver Receita
+          </button>
+        </div>
+      `;
+    });
+
+  lista.innerHTML = html;
+}
+
+function verReceita(index) {
+  const historico = JSON.parse(localStorage.getItem('historicoSchetini')) || [];
+  document.getElementById('resultado').innerHTML = historico[index].receitaHTML;
+  telaAtual = 4; // tela de resultado
+  slider.style.transform = `translateX(-${telaAtual * 100}vw)`;
+}
