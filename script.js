@@ -85,7 +85,7 @@ const receitas = {
       { nome: 'Sal', tipo: '%', valor: 2 },
       { nome: 'Alho in natura', tipo: '%', valor: 1 },
       { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Cura', tipo: '%', valor: 0.25 },
       { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
       { nome: 'Pequi in natura', tipo: '%', valor: 10 },
       { nome: 'Cebolinha', tipo: 'gosto' }
@@ -95,7 +95,7 @@ const receitas = {
       { nome: 'Sal', tipo: '%', valor: 2 },
       { nome: 'Alho in natura', tipo: '%', valor: 1 },
       { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Cura', tipo: '%', valor: 0.25 },
       { nome: 'Queijo coalho', tipo: 'gkg', valor: 70 },
       { nome: 'Queijo provolone', tipo: 'gkg', valor: 70 },
       { nome: 'Manjerona', tipo: 'gkg', valor: 2 }
@@ -105,7 +105,7 @@ const receitas = {
       { nome: 'Sal', tipo: '%', valor: 2 },
       { nome: 'Alho in natura', tipo: '%', valor: 1 },
       { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Cura', tipo: '%', valor: 0.25 },
       { nome: 'Manjerona', tipo: 'gkg', valor: 2 },
       { nome: 'Oh My Garlic', tipo: 'gkg', valor: 150 },
       { nome: 'Alho poró', tipo: 'gkg', valor: 60 }
@@ -116,7 +116,7 @@ const receitas = {
       { nome: 'Sal', tipo: '%', valor: 2 },
       { nome: 'Alho in natura', tipo: '%', valor: 1 },
       { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Cura', tipo: '%', valor: 0.25 },
       { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
       { nome: 'Tomate', tipo: 'gkg', valor: 130 },
       { nome: 'Queijo coalho', tipo: 'gkg', valor: 140 },
@@ -131,7 +131,7 @@ const receitas = {
       { nome: 'Sal', tipo: '%', valor: 0.5 },
       { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
       { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Cura', tipo: '%', valor: 0.25 },
       { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
       { nome: 'Queijo coalho', tipo: 'gkg', valor: 120 },
       { nome: 'Cebolinha', tipo: 'gosto' }
@@ -142,7 +142,7 @@ const receitas = {
       { nome: 'Sal', tipo: '%', valor: 0.5 },
       { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
       { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Cura', tipo: '%', valor: 0.25 },
       { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
       { nome: 'Queijo coalho', tipo: 'gkg', valor: 120 },
       { nome: 'Manteiga de garrafa', tipo: '%', valor: 5 },
@@ -153,7 +153,7 @@ const receitas = {
       { nome: 'Sal', tipo: '%', valor: 2 },
       { nome: 'Alho in natura', tipo: '%', valor: 1 },
       { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Cura', tipo: '%', valor: 0.25 },
       { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
       { nome: 'Queijo coalho', tipo: 'gkg', valor: 140 },
       { nome: 'Azeitona', tipo: 'gkg', valor: 100 },
@@ -166,7 +166,7 @@ const receitas = {
       { nome: 'Alho in natura', tipo: '%', valor: 1 },
       { nome: 'Chimichurri', tipo: '%', valor: 1 },
       { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Cura', tipo: '%', valor: 0.25 },
       { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 }
     ]
   },
@@ -178,7 +178,7 @@ const receitas = {
       { nome: 'Cerveja', tipo: '%', valor: 16 },
       { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
       { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Cura', tipo: '%', valor: 0.25 },
       { nome: 'Queijo coalho', tipo: 'gkg', valor: 140 },
       { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 }
     ],
@@ -188,7 +188,7 @@ const receitas = {
     { nome: 'Sal', tipo: '%', valor: 2.4 },
     { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
     { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Cura', tipo: '%', valor: 0.25 },
     { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 }
   ],
 
@@ -198,7 +198,7 @@ const receitas = {
     { nome: 'Sal', tipo: '%', valor: 2.4 },
     { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
     { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Cura', tipo: '%', valor: 0.25 },
     { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
     { nome: 'Rapadura', tipo: 'gkg', valor: 150 },
     { nome: 'Bacon', tipo: 'gkg', valor: 100 }
@@ -210,7 +210,7 @@ const receitas = {
     { nome: 'Sal', tipo: '%', valor: 2.4 },
     { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
     { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Cura', tipo: '%', valor: 0.25 },
     { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
     { nome: 'Pimenta biquinho', tipo: 'gkg', valor: 50 }
   ],
@@ -221,7 +221,7 @@ const receitas = {
     { nome: 'Sal', tipo: '%', valor: 2.4 },
     { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
     { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Cura', tipo: '%', valor: 0.25 },
     { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
     { nome: 'Queijo coalho', tipo: 'gkg', valor: 120 }
   ],
@@ -232,7 +232,7 @@ const receitas = {
     { nome: 'Sal', tipo: '%', valor: 2.4 },
     { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
     { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Cura', tipo: '%', valor: 0.25 },
     { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
     { nome: 'Queijo coalho', tipo: 'gkg', valor: 120 },
     { nome: 'Pimenta dedo de moça', tipo: 'unidkg', valor: 1 },
@@ -245,7 +245,7 @@ const receitas = {
     { nome: 'Sal', tipo: '%', valor: 2.4 },
     { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
     { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Cura', tipo: '%', valor: 0.25 },
     { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
     { nome: 'Pimenta dedo de moça', tipo: 'unidkg', valor: 2 }
   ],
@@ -256,7 +256,7 @@ const receitas = {
     { nome: 'Sal', tipo: '%', valor: 2.4 },
     { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
     { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Cura', tipo: '%', valor: 0.25 },
     { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
     { nome: 'Pimenta dedo de moça', tipo: 'unidkg', valor: 1 },
     { nome: 'Salsa', tipo: 'gosto' }
@@ -268,7 +268,7 @@ const receitas = {
     { nome: 'Sal', tipo: '%', valor: 2.4 },
     { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
     { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
-    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Cura', tipo: '%', valor: 0.25 },
     { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
     { nome: 'Erva doce', tipo: '%', valor: 0.1 },
     { nome: 'Salsa', tipo: 'gosto' }
@@ -280,7 +280,7 @@ const receitas = {
       { nome: 'Sal', tipo: '%', valor: 2.2 },
       { nome: 'Alho in natura', tipo: '%', valor: 1 },
       { nome: 'Liga Gel', tipo: '%', valor: 0.45 },
-      { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+      { nome: 'Cura', tipo: '%', valor: 0.25 },
       { nome: 'Pimenta calabresa', tipo: '%', valor: 0.7 },
       { nome: 'Açúcar mascavo', tipo: '%', valor: 1 },
       { nome: 'Vinho tinto', tipo: '%', valor: 1 },
@@ -315,14 +315,20 @@ function gerarReceita() {
 
   setTimeout(() => {
     const lista = receitas[tipo][sabor];
+
+    // 🔹 começa com o peso da proteína
+    let totalReceitaGramas = totalKg * 1000;
+
     let html = `<h3>${sabor} (${totalKg} kg)</h3><table>
       <tr><th>Ingrediente</th><th>Quantidade</th></tr>`;
 
     lista.forEach(item => {
       let qtd = '';
+      let pesoItemGramas = 0;
 
       if (item.tipo === '%') {
         const base = (item.valor / 100) * totalKg * 1000;
+        pesoItemGramas = base;
 
         if (ingredientesLiquidos.includes(item.nome)) {
           qtd = base >= 1000
@@ -333,25 +339,55 @@ function gerarReceita() {
         }
       } 
       else if (item.tipo === 'gkg') {
-        qtd = Math.round(item.valor * totalKg) + ' g';
+        pesoItemGramas = item.valor * totalKg;
+        qtd = Math.round(pesoItemGramas) + ' g';
       } 
       else if (item.tipo === 'gosto') {
         qtd = 'A gosto';
+        pesoItemGramas = 0;
       }
+
+      totalReceitaGramas += pesoItemGramas;
 
       html += `<tr><td>${item.nome}</td><td class="qtd">${qtd}</td></tr>`;
     });
 
+    // 🔹 peso total da receita
+    const totalReceitaKg = totalReceitaGramas / 1000;
+
+    // 🔹 NEW COR → 2,5 g por kg da receita
+    const newCorGramas = Math.round(totalReceitaKg * 2.5);
+
+// 🔹 NEW COR → entra como ingrediente
+html += `
+  <tr>
+    <td>New Cor</td>
+    <td class="qtd">${newCorGramas} g</td>
+  </tr>
+`;
+
+// 🔹 resumo final
+html += `
+  <tr class="total">
+    <th>Peso total da receita</th>
+    <th>${totalReceitaKg.toFixed(2)} kg</th>
+  </tr>
+`;
+
     html += '</table>';
+
     document.getElementById('resultado').innerHTML = html;
+
     salvarHistorico({
-  responsavel: document.getElementById('responsavel').value,
-  tipo: tipo,
-  sabor: sabor,
-  peso: totalKg,
-  data: new Date().toLocaleString(),
-  receitaHTML: html
-});
+      responsavel: document.getElementById('responsavel').value,
+      tipo: tipo,
+      sabor: sabor,
+      peso: totalKg,
+      pesoTotalReceita: totalReceitaKg,
+      newCor: newCorGramas,
+      data: new Date().toLocaleString(),
+      receitaHTML: html
+    });
 
     nextScreen(); // RESULTADO
   }, 1800);
