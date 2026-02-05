@@ -182,6 +182,98 @@ const receitas = {
       { nome: 'Queijo coalho', tipo: 'gkg', valor: 140 },
       { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 }
     ],
+      'Clássica': [
+    { nome: 'Toucinho', tipo: '%', valor: 15 },
+    { nome: 'Água', tipo: '%', valor: 35 },
+    { nome: 'Sal', tipo: '%', valor: 2.4 },
+    { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
+    { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 }
+  ],
+
+  Rapadura: [
+    { nome: 'Toucinho', tipo: '%', valor: 15 },
+    { nome: 'Água', tipo: '%', valor: 35 },
+    { nome: 'Sal', tipo: '%', valor: 2.4 },
+    { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
+    { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
+    { nome: 'Rapadura', tipo: 'gkg', valor: 150 },
+    { nome: 'Bacon', tipo: 'gkg', valor: 100 }
+  ],
+
+  'Pimenta Biquinho': [
+    { nome: 'Toucinho', tipo: '%', valor: 15 },
+    { nome: 'Água', tipo: '%', valor: 35 },
+    { nome: 'Sal', tipo: '%', valor: 2.4 },
+    { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
+    { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
+    { nome: 'Pimenta biquinho', tipo: 'gkg', valor: 50 }
+  ],
+
+  'Queijo Coalho': [
+    { nome: 'Toucinho', tipo: '%', valor: 15 },
+    { nome: 'Água', tipo: '%', valor: 35 },
+    { nome: 'Sal', tipo: '%', valor: 2.4 },
+    { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
+    { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
+    { nome: 'Queijo coalho', tipo: 'gkg', valor: 120 }
+  ],
+
+  'Queijo Picante': [
+    { nome: 'Toucinho', tipo: '%', valor: 15 },
+    { nome: 'Água', tipo: '%', valor: 35 },
+    { nome: 'Sal', tipo: '%', valor: 2.4 },
+    { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
+    { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
+    { nome: 'Queijo coalho', tipo: 'gkg', valor: 120 },
+    { nome: 'Pimenta dedo de moça', tipo: 'unidkg', valor: 1 },
+    { nome: 'Sálvia', tipo: 'gosto' }
+  ],
+
+  Apimentada: [
+    { nome: 'Toucinho', tipo: '%', valor: 15 },
+    { nome: 'Água', tipo: '%', valor: 35 },
+    { nome: 'Sal', tipo: '%', valor: 2.4 },
+    { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
+    { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
+    { nome: 'Pimenta dedo de moça', tipo: 'unidkg', valor: 2 }
+  ],
+
+  Suave: [
+    { nome: 'Toucinho', tipo: '%', valor: 15 },
+    { nome: 'Água', tipo: '%', valor: 35 },
+    { nome: 'Sal', tipo: '%', valor: 2.4 },
+    { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
+    { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
+    { nome: 'Pimenta dedo de moça', tipo: 'unidkg', valor: 1 },
+    { nome: 'Salsa', tipo: 'gosto' }
+  ],
+
+  'Salsicha Parrilheira': [
+    { nome: 'Toucinho', tipo: '%', valor: 15 },
+    { nome: 'Água', tipo: '%', valor: 35 },
+    { nome: 'Sal', tipo: '%', valor: 2.4 },
+    { nome: 'Alho in natura', tipo: '%', valor: 1.3 },
+    { nome: 'Liga Gel', tipo: '%', valor: 0.5 },
+    { nome: 'Nitrito de Sódio', tipo: '%', valor: 0.25 },
+    { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
+    { nome: 'Erva doce', tipo: '%', valor: 0.1 },
+    { nome: 'Salsa', tipo: 'gosto' }
+  ],
+
     'Apimentada DM': [
       { nome: 'Toucinho', tipo: '%', valor: 15 },
       { nome: 'Água', tipo: '%', valor: 30 },
