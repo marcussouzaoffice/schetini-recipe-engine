@@ -290,6 +290,16 @@ const receitas = {
 };
 
 /*********************************
+ * FUNÇÃO AUXILIAR – FORMATAR PESO
+ *********************************/
+function formatarPeso(pesoGramas) {
+  if (pesoGramas >= 1000) {
+    return (pesoGramas / 1000).toFixed(2) + ' kg';
+  }
+  return Math.round(pesoGramas) + ' g';
+}
+
+/*********************************
  * GERAR RECEITA
  *********************************/
 function gerarReceita() {
@@ -335,12 +345,12 @@ function gerarReceita() {
             ? (Math.round(base / 100) / 10) + ' L'
             : Math.round(base) + ' ml';
         } else {
-          qtd = Math.round(base) + ' g';
+          qtd = formatarPeso(base);
         }
       } 
       else if (item.tipo === 'gkg') {
         pesoItemGramas = item.valor * totalKg;
-        qtd = Math.round(pesoItemGramas) + ' g';
+        qtd = formatarPeso(pesoItemGramas);
       } 
       else if (item.tipo === 'gosto') {
         qtd = 'A gosto';
