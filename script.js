@@ -156,7 +156,7 @@ const receitas = {
       { nome: 'Cura', tipo: '%', valor: 0.25 },
       { nome: 'Pimenta bode', tipo: 'gkg', valor: 2 },
       { nome: 'Queijo coalho', tipo: 'gkg', valor: 140 },
-      { nome: 'Azeitona', tipo: 'gkg', valor: 100 },
+      { nome: 'Azeitona', tipo: 'gkg', valor: 10 },
       { nome: 'Cebolinha', tipo: 'gosto' },
       { nome: 'Salsa', tipo: 'gosto' }
     ],
